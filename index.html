@@ -161,7 +161,7 @@
     let categories = [...new Set(products.map(p => p.category))];
 
     categories.forEach(category => {
-      catalog.innerHTML += <h4 class="text-warning mt-3">${category}</h4><hr/>;
+      catalog.innerHTML += `<h4 class="text-warning mt-3">${category}</h4><hr/>`;
       let filtered = products.filter(p => p.category === category);
       filtered.forEach((p, i) => {
         catalog.innerHTML += `
@@ -185,7 +185,7 @@
     let categories = [...new Set(products.map(p => p.category))];
 
     categories.forEach(category => {
-      inventory.innerHTML += <tr class="table-secondary text-dark"><td colspan="5"><b>${category}</b></td></tr>;
+      inventory.innerHTML += `<tr class="table-secondary text-dark"><td colspan="5"><b>${category}</b></td></tr>`;
       products.filter(p => p.category === category).forEach((p, i) => {
         let stockClass = p.stock < 5 ? 'low-stock' : '';
         inventory.innerHTML += `
@@ -245,7 +245,7 @@
     cart.forEach(c => {
       products[c.index].stock -= c.qty;
       total += c.price * c.qty;
-      items.push(${c.name} x${c.qty});
+      items.push(`${c.name} x${c.qty}`);
     });
 
     let sale = { total, items: items.join(', '), time: new Date().toLocaleString() };
