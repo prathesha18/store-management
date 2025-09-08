@@ -1,0 +1,44 @@
+body {
+  background-color: #000;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box {
+  background-color: #111;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.6);
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.btn-red:hover {
+  background-color: darkred;
+  transform: scale(1.05);
+}
+
+.low-stock {
+  background-color: rgba(255, 0, 0, 0.2);
+}
